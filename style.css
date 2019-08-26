@@ -1,0 +1,76 @@
+div, button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    outline: none;
+}
+
+.wrapper {
+    position: fixed;
+    width: 320px;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+}
+
+.number {
+    background: #aaa;
+    text-align: right;
+    padding: 28px 20px 5px;
+    font-size: 48px;
+    font-weight: 100;
+    letter-spacing: -.02em;
+    background: #222;
+    color: white;
+}
+
+.row {
+    display : grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    background: black;
+    width: 100%;
+}
+
+.button {
+    padding: 18px;
+    font-size: 27px;
+    background: #ccc;
+}
+
+.button:active {
+    background: #ddd;
+}
+
+.button:nth-child(-n+4) {
+    background: #e3e3e3;
+}
+
+.button:nth-child(-n+4):active {
+    background: #f1f1f1;
+}
+
+.button:last-child,
+.button:nth-child(4n) {
+    background: rgb(116, 128, 161);
+    color: white;
+}
+
+.button:last-child:active,
+.button:nth-child(4n):active {
+    background: rgb(138, 148, 177);
+}
+
+.button.wide {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: left;
+    padding-left: 31px;
+}
